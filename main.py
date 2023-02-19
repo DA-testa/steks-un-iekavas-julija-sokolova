@@ -34,7 +34,7 @@ def main():
             with open(f"test/{step}") as fails:
                 text=fails.read()
                 mismatch=(mismatch)
-                step=step+1
+                step+=1
     if "I" in text:
         text=input()
         mismatch=find_mismatch(text)
