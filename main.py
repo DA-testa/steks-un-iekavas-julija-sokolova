@@ -28,9 +28,17 @@ def find_mismatch(text):
 def main():
     text = input()
     mismatch = find_mismatch(text)
+    if "F" in text:
+        step=0
+        while step<6:
+            with open(f"test/{step}") as fails:
+                text=fails.read()
+                mismatch=(mismatch)
+                step=step+1
+    if "I" in text:
+        text=input()
+        mismatch=find_mismatch(text)
+        print(mismatch)
  
-            
-
-
 if __name__ == "__main__":
     main()
